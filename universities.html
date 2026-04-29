@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UKAdmit - Partner Universities</title>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="mobile.css" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#613f20",
+                      "tertiary": "#0d0400",
+                      "secondary-fixed-dim": "#b6c4ff",
+                      "tertiary-fixed-dim": "#eebd94",
+                      "secondary": "#1e50d2",
+                      "on-secondary-fixed": "#00164f",
+                      "surface-dim": "#dbd9dc",
+                      "on-primary": "#ffffff",
+                      "background": "#fbf9fb",
+                      "primary": "#000615",
+                      "on-background": "#1b1b1e",
+                      "surface-bright": "#fbf9fb",
+                      "inverse-primary": "#b5c7ea",
+                      "secondary-container": "#406bec",
+                      "primary-fixed-dim": "#b5c7ea",
+                      "surface": "#fbf9fb",
+                      "on-tertiary-fixed": "#2e1500",
+                      "on-secondary-fixed-variant": "#003ab1",
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#7587a7",
+                      "surface-variant": "#e4e2e5",
+                      "tertiary-fixed": "#ffdcc1",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-highest": "#e4e2e5",
+                      "on-primary-fixed-variant": "#364764",
+                      "on-primary-fixed": "#071c36",
+                      "tertiary-container": "#321800",
+                      "on-error-container": "#93000a",
+                      "surface-container": "#efedf0",
+                      "inverse-surface": "#303033",
+                      "inverse-on-surface": "#f2f0f3",
+                      "on-tertiary": "#ffffff",
+                      "on-surface": "#1b1b1e",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f5f3f6",
+                      "primary-container": "#0b1f3a",
+                      "outline-variant": "#c4c6ce",
+                      "secondary-fixed": "#dce1ff",
+                      "surface-container-high": "#e9e7ea",
+                      "on-tertiary-container": "#a87e59",
+                      "on-secondary-container": "#fffbff",
+                      "primary-fixed": "#d6e3ff",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#44474d",
+                      "surface-tint": "#4d5f7d",
+                      "outline": "#75777e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "margin-mobile": "16px",
+                      "element-gap": "24px",
+                      "margin-desktop": "48px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Manrope"],
+                      "body-md": ["Manrope"],
+                      "headline-md": ["Manrope"],
+                      "headline-lg": ["Manrope"],
+                      "label-bold": ["Manrope"],
+                      "body-lg": ["Manrope"]
+              },
+              "fontSize": {
+                      "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                      "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                      "headline-md": ["28px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                      "headline-lg": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                      "label-bold": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/50 shadow-sm h-[72px]" style="font-family:Manrope,sans-serif;">
+  <div class="flex justify-between items-center h-full px-4 sm:px-8 max-w-7xl mx-auto">
+    <a href="index.html" class="text-2xl font-extrabold text-[#0B1F3A] tracking-tighter flex items-end gap-2">
+      UKAdmit <span class="text-xs font-medium text-slate-500 pb-1 hidden sm:block">by Rivil International</span>
+    </a>
+    <div class="hidden md:flex space-x-6 items-center text-sm font-semibold tracking-tight">
+      <a href="universities.html" class="text-[#0F9F8F] border-b-2 border-[#0F9F8F] px-3 py-2 rounded-lg hover:text-[#0F9F8F] transition-colors">Universities</a>
+      <a href="programmes.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:text-[#0F9F8F] transition-colors">Programmes</a>
+      <a href="study-areas.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:text-[#0F9F8F] transition-colors">Study Areas</a>
+      <a href="how-it-works.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:text-[#0F9F8F] transition-colors">How It Works</a>
+      <a href="success-stories.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:text-[#0F9F8F] transition-colors">Success Stories</a>
+      <a href="about.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:text-[#0F9F8F] transition-colors">About</a>
+      <a href="contact.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:text-[#0F9F8F] transition-colors">Contact</a>
+    </div>
+    <a href="contact.html" class="hidden md:flex items-center justify-center bg-[#0F9F8F] text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-[#0d8a7c] transition-all duration-300 active:scale-95 shadow-md">
+      Book Free Consultation
+    </a>
+    <!-- Mobile menu button (decorative) -->
+    <button class="md:hidden text-[#0B1F3A]" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-2 shadow-lg" style="font-family:Manrope,sans-serif;">
+    <a href="universities.html" class="block py-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#0F9F8F]">Universities</a>
+    <a href="programmes.html" class="block py-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#0F9F8F]">Programmes</a>
+    <a href="study-areas.html" class="block py-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#0F9F8F]">Study Areas</a>
+    <a href="how-it-works.html" class="block py-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#0F9F8F]">How It Works</a>
+    <a href="success-stories.html" class="block py-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#0F9F8F]">Success Stories</a>
+    <a href="about.html" class="block py-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#0F9F8F]">About</a>
+    <a href="contact.html" class="block py-2 text-sm font-semibold text-[#0B1F3A] hover:text-[#0F9F8F]">Contact</a>
+    <a href="contact.html" class="block mt-2 bg-[#0F9F8F] text-white text-center py-3 rounded-xl text-sm font-bold">Book Free Consultation</a>
+  </div>
+</nav>
+<!-- TopAppBar -->
+
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[88px] pb-section-gap px-gutter max-w-container-max mx-auto w-full">
+<!-- Hero Section -->
+<section class="text-center max-w-3xl mx-auto mb-16">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Explore UK Partner Universities</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Find the right UK university for your goals with support from Rivil counsellors.</p>
+</section>
+<!-- Search & Filter Controls -->
+<section class="mb-section-gap">
+<!-- Search Bar -->
+<div class="relative max-w-2xl mx-auto mb-8">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline" data-icon="search">search</span>
+</div>
+<input class="w-full h-[56px] pl-12 pr-4 bg-surface-container-highest border-transparent focus:border-secondary focus:ring-0 rounded-xl font-body-md text-body-md text-on-surface placeholder-outline-variant transition-all" placeholder="Search universities by name or city" type="text"/>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap justify-center gap-3">
+<button class="px-5 py-2.5 rounded-full bg-secondary text-on-secondary font-label-bold text-label-bold transition-all hover:opacity-90">All Partners</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-secondary-fixed transition-all font-label-bold text-label-bold">London</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-secondary-fixed transition-all font-label-bold text-label-bold">Manchester</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-secondary-fixed transition-all font-label-bold text-label-bold">Birmingham</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-secondary-fixed transition-all font-label-bold text-label-bold">England</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-secondary-fixed transition-all font-label-bold text-label-bold">Scotland</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-secondary-fixed transition-all font-label-bold text-label-bold">Wales</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-container text-on-surface hover:bg-secondary-fixed transition-all font-label-bold text-label-bold">Northern Ireland</button>
+</div>
+</section>
+<!-- Universities Grid (Premium Cards) -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-element-gap">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.05)] hover:shadow-[0px_20px_40px_rgba(11,31,58,0.08)] transition-all duration-300 group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+<div class="h-48 w-full relative bg-surface-variant overflow-hidden">
+<img alt="classic university building with grand columns and green lawn under clear sky" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="classic university building with grand columns and green lawn under clear sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt49JdVlR1Qxl167-aEquOVWui4YLRW4IQPW8ipa40l-C7ezlJgNtr6snqUViqTT8fNbhENfx5-KC6KcjuDheYNyTIUB0_odVjSp9Gkb8NpUp79tqj3do-3EWyozkJ3EFSTB1GYobVWLM9tnqaqXY7F0LmeBYMWJ8FWzIsr3fYnywCtxT56I5NwORRBglT7KIh_3rqatrUb_EjgPUJQqcA1fyjfP8um5yGKXudKqOFfU3wHnF3vpi_mKgXja3CyXKzU1LSWnZSs_0"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="verified">verified</span>
+<span class="font-label-bold text-label-bold text-primary">Official Partner</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-16 h-16 bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-center p-2 border border-outline-variant/30 shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="account_balance">account_balance</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[22px] text-primary leading-tight mb-1">University College London</h3>
+<div class="flex items-center text-on-surface-variant gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+<span class="font-body-md text-[14px]">London, England</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">A world-leading multi-disciplinary university, renowned for its academic excellence, innovative research, and vibrant central London campus.</p>
+<div class="mb-8 flex flex-wrap gap-2 mt-auto">
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">Business</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">Engineering</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">Medicine</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">+12 more</span>
+</div>
+<div class="flex gap-3 mt-auto">
+<button class="flex-1 py-3 px-4 rounded-xl border-2 border-primary text-primary font-label-bold text-label-bold hover:bg-primary hover:text-on-primary transition-colors text-center" onclick="window.location='university-coventry.html'">View Programmes</button>
+<button class="flex-1 py-3 px-4 rounded-xl bg-secondary text-on-secondary font-label-bold text-label-bold hover:bg-secondary/90 transition-colors text-center shadow-sm" onclick="window.location='contact.html'">Enquire</button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.05)] hover:shadow-[0px_20px_40px_rgba(11,31,58,0.08)] transition-all duration-300 group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+<div class="h-48 w-full relative bg-surface-variant overflow-hidden">
+<img alt="modern glass architecture of university building against blue sky" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="modern glass architecture of university building against blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASdDOAg8NE2JKNicHw6dNNABXw4ZCx_xOZPcazfaJ4XFu6_1cj0gOUDT2hqNfv6eSQvT5naoSH54KvFOqYdDJVPI6TzdK1M6wLBgQSiS5vkuty8vqaexliypm5dFMbMQewP5ytEX-Rj4BwuscwLyrlHzM4Aja_j3t9CXyANh_R6TYVh5E6RKwtQuQMgxJ7tkE9G21NhdoEAaTAkqdU9oMhntfzLcGQL2y_v49uN5wqN1T-2aVULHUCt8MFbscdRldF7ghqHePgRpU"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="verified">verified</span>
+<span class="font-label-bold text-label-bold text-primary">Official Partner</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-16 h-16 bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-center p-2 border border-outline-variant/30 shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="school">school</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[22px] text-primary leading-tight mb-1">University of Manchester</h3>
+<div class="flex items-center text-on-surface-variant gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+<span class="font-body-md text-[14px]">Manchester, England</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Part of the prestigious Russell Group, offering outstanding teaching and research facilities in one of the UK's most vibrant student cities.</p>
+<div class="mb-8 flex flex-wrap gap-2 mt-auto">
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">Data Science</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">Architecture</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">Law</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">+8 more</span>
+</div>
+<div class="flex gap-3 mt-auto">
+<button class="flex-1 py-3 px-4 rounded-xl border-2 border-primary text-primary font-label-bold text-label-bold hover:bg-primary hover:text-on-primary transition-colors text-center" onclick="window.location='programmes.html'">View Programmes</button>
+<button class="flex-1 py-3 px-4 rounded-xl bg-secondary text-on-secondary font-label-bold text-label-bold hover:bg-secondary/90 transition-colors text-center shadow-sm" onclick="window.location='contact.html'">Enquire</button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.05)] hover:shadow-[0px_20px_40px_rgba(11,31,58,0.08)] transition-all duration-300 group border border-transparent hover:border-secondary/20 flex flex-col h-full">
+<div class="h-48 w-full relative bg-surface-variant overflow-hidden">
+<img alt="historic university courtyard with gothic architecture and clear skies" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="historic university courtyard with gothic architecture and clear skies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByoJ3Ln4tbcjI-1of6DNBouhe-9U3pwi_WPoU6V6SsOe-Maz1kL2dCzTZ9XGZRiaRh1364RqUfkriiuWIaVPPzj0bUxq26Mex4Y01Ck8dF9hWkjRSG3f3OfP0DJSYbOLEO2qHG7UT6JYI28DdA9ezaFD7PDH5qbVC7I2mOtSc53_UwK2U1i9jZ-UOHthwcmv71dtxc8H69v37ce3rVh8mZoHRd_lJiUSAUbJ7XIv-zViwb6pCZeCszF9D9EKnUt-szHvE4DARwzFw"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="verified">verified</span>
+<span class="font-label-bold text-label-bold text-primary">Official Partner</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-16 h-16 bg-surface-container-lowest rounded-xl shadow-sm flex items-center justify-center p-2 border border-outline-variant/30 shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="menu_book">menu_book</span>
+</div>
+<div>
+<h3 class="font-headline-md text-[22px] text-primary leading-tight mb-1">University of Edinburgh</h3>
+<div class="flex items-center text-on-surface-variant gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span>
+<span class="font-body-md text-[14px]">Edinburgh, Scotland</span>
+</div>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Consistently ranked among the top 50 universities in the world, located in Scotland's historic and cultural capital.</p>
+<div class="mb-8 flex flex-wrap gap-2 mt-auto">
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">Arts</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">Computer Science</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">Finance</span>
+<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">+15 more</span>
+</div>
+<div class="flex gap-3 mt-auto">
+<button class="flex-1 py-3 px-4 rounded-xl border-2 border-primary text-primary font-label-bold text-label-bold hover:bg-primary hover:text-on-primary transition-colors text-center" onclick="window.location='programmes.html'">View Programmes</button>
+<button class="flex-1 py-3 px-4 rounded-xl bg-secondary text-on-secondary font-label-bold text-label-bold hover:bg-secondary/90 transition-colors text-center shadow-sm" onclick="window.location='contact.html'">Enquire</button>
+</div>
+</div>
+</article>
+</section>
+<!-- Bottom CTA -->
+<section class="mt-section-gap bg-primary-container rounded-[24px] p-12 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-on-primary-container mb-4">Need help choosing a university?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container/80 mb-8">Our expert counsellors can help match your academic background and career aspirations with the perfect institution.</p>
+<button class="px-8 py-4 rounded-xl bg-secondary text-on-secondary font-label-bold text-label-bold hover:bg-secondary/90 transition-transform hover:-translate-y-1 shadow-lg inline-flex items-center gap-2">
+                    Speak to a Counsellor
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+
+<footer class="bg-[#0B1F3A] w-full py-14 px-8 border-t border-slate-800" style="font-family:Manrope,sans-serif;">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto text-slate-300 text-sm">
+    <div>
+      <a href="index.html" class="text-2xl font-extrabold text-white block tracking-tight mb-1">UKAdmit</a>
+      <span class="text-sm text-slate-400 block mb-4">by Rivil International</span>
+      <p class="text-slate-400 mb-6 leading-relaxed">Expert guidance for Sri Lankan students applying to UK universities.</p>
+      <p class="text-xs text-slate-500">© 2024 UKAdmit by Rivil International.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4 text-base">Quick Links</h4>
+      <ul class="space-y-3">
+        <li><a href="universities.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Universities</a></li>
+        <li><a href="programmes.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Programmes</a></li>
+        <li><a href="study-areas.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Study Areas</a></li>
+        <li><a href="how-it-works.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">How It Works</a></li>
+        <li><a href="success-stories.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Success Stories</a></li>
+        <li><a href="about.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">About Us</a></li>
+        <li><a href="contact.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4 text-base">Study Areas</h4>
+      <ul class="space-y-3">
+        <li><a href="study-areas.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Business &amp; Management</a></li>
+        <li><a href="study-areas.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Computer Science &amp; IT</a></li>
+        <li><a href="study-areas.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Engineering</a></li>
+        <li><a href="study-areas.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Health Sciences</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4 text-base">Contact</h4>
+      <ul class="space-y-3">
+        <li><a href="contact.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block flex items-center gap-2"><span class="material-symbols-outlined text-base">call</span> Contact Sri Lanka</a></li>
+        <li><a href="contact.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Book a Consultation</a></li>
+        <li><a href="#" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Privacy Policy</a></li>
+        <li><a href="#" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body></html>
