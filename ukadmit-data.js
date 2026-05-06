@@ -1,4 +1,4 @@
-﻿window.UKADMIT_DATA = {
+window.UKADMIT_DATA = {
   universities: [
   {
     "name": "Oxford Brookes University",
@@ -18,7 +18,7 @@
         "study_mode": "full-time",
         "overview": "An ARB/RIBA Part 1-accredited architecture programme that develops creative design skills, technical knowledge, and critical thinking. Based in the heart of Oxford, students benefit from a strong studio culture, state-of-the-art facilities, and international study opportunities.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -41,7 +41,7 @@
         "study_mode": "full-time",
         "overview": "A unique joint programme that develops both commercial business acumen and a thorough understanding of legal principles. Graduates are prepared for careers spanning corporate law, compliance, management consultancy, and entrepreneurship.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -64,7 +64,7 @@
         "study_mode": "full-time",
         "overview": "A comprehensive business degree covering marketing, finance, operations, strategy, and leadership. Students develop practical business skills through case studies, live projects, and an optional work placement year with leading companies.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 112 UCAS points",
+          "min_qualification": "A Levels or equivalent — 112 UCAS points",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -153,7 +153,7 @@
         "study_mode": "full-time",
         "overview": "An innovative programme focused on developing the entrepreneurial mindset needed to launch and grow successful ventures. Students learn business planning, innovation management, startup financing, and how to identify and exploit new market opportunities.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -176,7 +176,7 @@
         "study_mode": "full-time",
         "overview": "Critically examine the role of media and communication in society, culture, and politics. This programme covers digital media, film, advertising, cultural theory, and media industries, equipping graduates for careers in media production, communications, PR, and cultural organisations.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -199,7 +199,7 @@
         "study_mode": "full-time",
         "overview": "Master the digital marketing skills driving modern business growth, including SEO, social media marketing, content strategy, analytics, and e-commerce. This practice-led programme includes live client projects and optional industry placement, preparing graduates for careers in the fast-growing digital economy.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -552,7 +552,7 @@
         "study_mode": "full-time",
         "overview": "Develop the cross-cultural management skills and global business knowledge needed to succeed in international organisations. This programme covers international strategy, global marketing, cross-border operations, and leadership in a multicultural environment.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -575,7 +575,7 @@
         "study_mode": "full-time",
         "overview": "Study global politics, international law, diplomacy, and geopolitics in the internationally renowned city of Oxford. This programme prepares graduates for careers in diplomacy, international organisations, NGOs, and the civil service.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 120 UCAS points",
+          "min_qualification": "A Levels or equivalent — 120 UCAS points",
           "min_ielts": "6.5",
           "ielts_band_min": "6.0"
         },
@@ -664,7 +664,7 @@
         "study_mode": "full-time",
         "overview": "Develop expertise in brand management, digital marketing, consumer behaviour, and marketing strategy. This CIM-accredited programme combines theory with live briefs and industry projects, preparing graduates for careers in marketing and communications.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 112 UCAS points",
+          "min_qualification": "A Levels or equivalent — 112 UCAS points",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -687,7 +687,7 @@
         "study_mode": "full-time",
         "overview": "Explore the convergence of journalism, publishing, and digital media in a programme that develops strong writing, storytelling, and media production skills. Students gain hands-on experience through the university's own media platforms and industry partnerships with leading publishers.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -774,7 +774,7 @@
         "subject_area": "Other",
         "duration_months": 36,
         "study_mode": "full-time",
-        "overview": "A QTS-qualifying degree that combines educational theory with extensive school-based placements, preparing graduates to teach across the primary age range (5â€“11) in UK schools and internationally.",
+        "overview": "A QTS-qualifying degree that combines educational theory with extensive school-based placements, preparing graduates to teach across the primary age range (5–11) in UK schools and internationally.",
         "entry_requirements": {
           "min_qualification": "A Levels or equivalent",
           "min_ielts": "6.0"
@@ -952,7 +952,7 @@
         "study_mode": "full-time",
         "overview": "Prepare for the future of mobility with a programme covering vehicle dynamics, powertrain systems, electric vehicle technology, and advanced manufacturing. Oxford Brookes has a world-renowned motorsport engineering heritage, giving students access to exceptional facilities and industry connections.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -975,7 +975,7 @@
         "study_mode": "full-time",
         "overview": "An accredited civil engineering degree covering structural analysis, geotechnics, hydraulics, transportation, and sustainable construction. Students undertake real design projects and benefit from industry placements with leading engineering firms.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 112 UCAS points including Mathematics",
+          "min_qualification": "A Levels or equivalent — 112 UCAS points including Mathematics",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1020,7 +1020,7 @@
         "study_mode": "full-time",
         "overview": "An accredited programme covering thermodynamics, fluid mechanics, structural analysis, manufacturing, and design engineering. Students use industry-standard CAD/CAM tools and undertake real design projects, with excellent graduate prospects in engineering and manufacturing sectors.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1065,7 +1065,7 @@
         "study_mode": "full-time",
         "overview": "Oxford Brookes is one of the top destinations in the world for motorsport engineering, with direct links to Formula 1 and the global motorsport industry. This programme covers aerodynamics, vehicle dynamics, race engine systems, and data analysis for high-performance vehicles.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1132,7 +1132,7 @@
         "study_mode": "full-time",
         "overview": "This programme provides a solid foundation in financial accounting, management accounting, auditing, taxation, and financial analysis. Graduates are well-positioned for careers in accounting, banking, and financial services.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 112 UCAS points",
+          "min_qualification": "A Levels or equivalent — 112 UCAS points",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1155,7 +1155,7 @@
         "study_mode": "full-time",
         "overview": "A cutting-edge programme covering machine learning, deep learning, computer vision, natural language processing, and AI ethics. Students develop both the theoretical foundations and practical programming skills needed to build intelligent systems for the technology industry.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1266,7 +1266,7 @@
         "study_mode": "full-time",
         "overview": "Combine the disciplines of business management and financial analysis in one integrated programme. Students develop expertise in corporate finance, investment, accounting, and business strategy, with strong career prospects in financial services and corporate management.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1289,7 +1289,7 @@
         "study_mode": "full-time",
         "overview": "A rigorous computer science programme covering programming, algorithms, software engineering, databases, networks, and artificial intelligence. Students graduate with strong technical skills and excellent employment prospects in the technology sector.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 120 UCAS points including Mathematics",
+          "min_qualification": "A Levels or equivalent — 120 UCAS points including Mathematics",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1312,7 +1312,7 @@
         "study_mode": "full-time",
         "overview": "Develop specialist expertise in cyber security, ethical hacking, network defence, cryptography, and digital forensics alongside core computer science skills. Graduates are in high demand across financial services, government, and global technology companies.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1335,7 +1335,7 @@
         "study_mode": "full-time",
         "overview": "Develop the skills to manage complex construction and infrastructure projects from inception to completion. This programme covers project planning, cost management, procurement, building technology, and sustainable construction, with strong links to industry employers.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1402,7 +1402,7 @@
         "study_mode": "full-time",
         "overview": "Study microeconomics, macroeconomics, econometrics, and applied economics with strong analytical and quantitative foundations. Graduates pursue careers in economic research, government policy, financial analysis, and business consulting.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1425,7 +1425,7 @@
         "study_mode": "full-time",
         "overview": "A multidisciplinary programme that combines economic theory, financial analysis, and international business strategy. Students graduate with strong quantitative skills and a global perspective, ideally suited for careers in finance, international trade, and economic consultancy.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1448,7 +1448,7 @@
         "study_mode": "full-time",
         "overview": "Develop the skills to plan, manage, and deliver large-scale events from corporate conferences to music festivals and sporting events. This programme covers event operations, marketing, sponsorship, financial management, and sustainability in the global events industry.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1471,7 +1471,7 @@
         "study_mode": "full-time",
         "overview": "Bridge the gap between technology and business with a programme combining IT systems, data management, digital transformation, and business analysis. This degree is ideal for students who want to lead technology-driven change within organisations.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1494,7 +1494,7 @@
         "study_mode": "full-time",
         "overview": "Oxford Brookes is one of the UK's leading institutions for hospitality and tourism, consistently ranked in the top 10 globally. This programme develops the operational and strategic management skills needed for senior roles in hotels, travel, and the global hospitality industry.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1561,7 +1561,7 @@
         "study_mode": "full-time",
         "overview": "An NMC-approved nursing degree combining academic study with extensive clinical placements in hospitals, community settings, and specialist units. Graduates are qualified to register as adult nurses and work across the NHS and private healthcare sector.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 104 UCAS points including a science subject",
+          "min_qualification": "A Levels or equivalent — 104 UCAS points including a science subject",
           "min_ielts": "7.0",
           "ielts_band_min": "7.0"
         },
@@ -1650,7 +1650,7 @@
         "study_mode": "full-time",
         "overview": "An HCPC and RCOT-accredited degree that prepares students to help individuals overcome physical, mental, and social barriers to everyday living. Students complete over 1,000 hours of clinical placement across hospitals, community services, and specialist settings.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "7.0",
           "ielts_band_min": "7.0"
         },
@@ -1695,7 +1695,7 @@
         "study_mode": "full-time",
         "overview": "An HCPC-approved physiotherapy degree that combines biomechanics, anatomy, musculoskeletal therapy, and neurology with extensive clinical placement hours. Graduates qualify to practise as physiotherapists in NHS hospitals, sports clinics, and private healthcare settings worldwide.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "7.0",
           "ielts_band_min": "7.0"
         },
@@ -1740,7 +1740,7 @@
         "study_mode": "full-time",
         "overview": "A BPS-accredited psychology degree exploring cognitive, social, developmental, and clinical psychology. Students gain research skills through laboratory work and dissertation projects, preparing for careers in psychology, healthcare, education, and business.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 120 UCAS points",
+          "min_qualification": "A Levels or equivalent — 120 UCAS points",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1763,7 +1763,7 @@
         "study_mode": "full-time",
         "overview": "An RICS-accredited programme preparing students for careers in cost management and commercial management in the construction and property industries. Covers cost planning, procurement, contract law, and commercial risk management for major building projects.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1808,7 +1808,7 @@
         "study_mode": "full-time",
         "overview": "Explore the physiological, psychological, and biomechanical principles underpinning sport and exercise performance. This programme provides laboratory-based and field training, preparing graduates for careers in elite sport, fitness, rehabilitation, and health promotion.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.0",
           "ielts_band_min": "5.5"
         },
@@ -1875,7 +1875,7 @@
         "study_mode": "full-time",
         "overview": "A qualifying law degree covering contract law, criminal law, tort, constitutional law, and equity. Students benefit from a purpose-built law school, mooting competitions, and strong links with the legal profession in Oxford and beyond.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 128 UCAS points",
+          "min_qualification": "A Levels or equivalent — 128 UCAS points",
           "min_ielts": "6.5",
           "ielts_band_min": "6.0"
         },
@@ -1898,7 +1898,7 @@
         "study_mode": "full-time",
         "overview": "A qualifying law degree with specialist criminology modules examining crime, justice, punishment, and criminal policy. This combination prepares graduates for careers in criminal law, the Crown Prosecution Service, probation service, policy, and academic research.",
         "entry_requirements": {
-          "min_qualification": "A Levels or equivalent â€” 96-128 UCAS points depending on course",
+          "min_qualification": "A Levels or equivalent — 96-128 UCAS points depending on course",
           "min_ielts": "6.5",
           "ielts_band_min": "6.0"
         },
@@ -4271,8 +4271,258 @@
         "source_file": "data/seed-oxford-brookes-full.ts"
       }
     ]
+  },
+  {
+    "name": "University of Greenwich",
+    "slug": "university-of-greenwich",
+    "country": "United Kingdom",
+    "city": "London",
+    "location": "London, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "Bath Spa University",
+    "slug": "bath-spa-university",
+    "country": "United Kingdom",
+    "city": "Bath",
+    "location": "Bath, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "Birmingham City University",
+    "slug": "birmingham-city-university",
+    "country": "United Kingdom",
+    "city": "Birmingham",
+    "location": "Birmingham, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "Coventry University",
+    "slug": "coventry-university",
+    "country": "United Kingdom",
+    "city": "Coventry",
+    "location": "Coventry, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "De Montfort University",
+    "slug": "de-montfort-university",
+    "country": "United Kingdom",
+    "city": "Leicester",
+    "location": "Leicester, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "Glasgow Caledonian University",
+    "slug": "glasgow-caledonian-university",
+    "country": "United Kingdom",
+    "city": "Glasgow",
+    "location": "Glasgow, Scotland",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "Keele University",
+    "slug": "keele-university",
+    "country": "United Kingdom",
+    "city": "Keele",
+    "location": "Keele, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "Leeds Beckett University",
+    "slug": "leeds-beckett-university",
+    "country": "United Kingdom",
+    "city": "Leeds",
+    "location": "Leeds, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "London South Bank University",
+    "slug": "london-south-bank-university",
+    "country": "United Kingdom",
+    "city": "London",
+    "location": "London, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "Middlesex University",
+    "slug": "middlesex-university",
+    "country": "United Kingdom",
+    "city": "London",
+    "location": "London, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "Robert Gordon University",
+    "slug": "robert-gordon-university",
+    "country": "United Kingdom",
+    "city": "Aberdeen",
+    "location": "Aberdeen, Scotland",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "The University of Buckingham",
+    "slug": "the-university-of-buckingham",
+    "country": "United Kingdom",
+    "city": "Buckingham",
+    "location": "Buckingham, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Birmingham",
+    "slug": "university-of-birmingham",
+    "country": "United Kingdom",
+    "city": "Birmingham",
+    "location": "Birmingham, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Brighton",
+    "slug": "university-of-brighton",
+    "country": "United Kingdom",
+    "city": "Brighton",
+    "location": "Brighton, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Chester",
+    "slug": "university-of-chester",
+    "country": "United Kingdom",
+    "city": "Chester",
+    "location": "Chester, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Cumbria",
+    "slug": "university-of-cumbria",
+    "country": "United Kingdom",
+    "city": "Carlisle",
+    "location": "Carlisle, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Dundee",
+    "slug": "university-of-dundee",
+    "country": "United Kingdom",
+    "city": "Dundee",
+    "location": "Dundee, Scotland",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of East London",
+    "slug": "university-of-east-london",
+    "country": "United Kingdom",
+    "city": "London",
+    "location": "London, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Exeter",
+    "slug": "university-of-exeter",
+    "country": "United Kingdom",
+    "city": "Exeter",
+    "location": "Exeter, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Leicester",
+    "slug": "university-of-leicester",
+    "country": "United Kingdom",
+    "city": "Leicester",
+    "location": "Leicester, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Plymouth",
+    "slug": "university-of-plymouth",
+    "country": "United Kingdom",
+    "city": "Plymouth",
+    "location": "Plymouth, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Reading",
+    "slug": "university-of-reading",
+    "country": "United Kingdom",
+    "city": "Reading",
+    "location": "Reading, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Salford",
+    "slug": "university-of-salford",
+    "country": "United Kingdom",
+    "city": "Salford",
+    "location": "Salford, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Surrey",
+    "slug": "university-of-surrey",
+    "country": "United Kingdom",
+    "city": "Guildford",
+    "location": "Guildford, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of the West of England - UWE",
+    "slug": "university-of-the-west-of-england-uwe",
+    "country": "United Kingdom",
+    "city": "Bristol",
+    "location": "Bristol, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of West London",
+    "slug": "university-of-west-london",
+    "country": "United Kingdom",
+    "city": "London",
+    "location": "London, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of Wolverhampton",
+    "slug": "university-of-wolverhampton",
+    "country": "United Kingdom",
+    "city": "Wolverhampton",
+    "location": "Wolverhampton, England",
+    "is_active": true,
+    "programmes": []
+  },
+  {
+    "name": "University of York",
+    "slug": "university-of-york",
+    "country": "United Kingdom",
+    "city": "York",
+    "location": "York, England",
+    "is_active": true,
+    "programmes": []
   }
 ]
-
 };
-

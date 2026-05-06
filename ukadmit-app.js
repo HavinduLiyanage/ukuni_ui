@@ -56,6 +56,16 @@
     return [...new Set(items.filter(Boolean))];
   }
 
+  function programmeCountText(count, fallback = "Programme guidance available") {
+    if (count === 1) return "1 listed programme";
+    if (count > 1) return `${count} listed programmes`;
+    return fallback;
+  }
+
+  function pluralize(count, singular, plural = `${singular}s`) {
+    return `${count} ${count === 1 ? singular : plural}`;
+  }
+
   function subjectIcon(subject) {
     const text = String(subject || "").toLowerCase();
     if (text.includes("business")) return "business_center";
@@ -91,6 +101,10 @@
     const subjectsHtml = shownSubjects
       .map((subject) => `<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">${escapeHtml(subject)}</span>`)
       .join("");
+    const description = activeProgrammes.length
+      ? `Explore ${activeProgrammes.length} programmes at ${escapeHtml(university.name)} across ${subjects.length || "multiple"} study areas.`
+      : `Programme listings for ${escapeHtml(university.name)} are being added. Contact UKAdmit for current application guidance.`;
+    const subjectSummary = subjectsHtml || `<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">Programme guidance available</span>`;
     return `
       <article class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.05)] hover:shadow-[0px_20px_40px_rgba(11,31,58,0.08)] transition-all duration-300 group border border-transparent hover:border-secondary/20 flex flex-col h-full">
         <div class="h-48 w-full relative bg-surface-variant overflow-hidden">
@@ -114,10 +128,10 @@
             </div>
           </div>
           <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
-            Explore ${activeProgrammes.length} programmes at ${escapeHtml(university.name)} across ${subjects.length || "multiple"} study areas.
+            ${description}
           </p>
           <div class="mb-8 flex flex-wrap gap-2 mt-auto">
-            ${subjectsHtml}
+            ${subjectSummary}
             ${extraCount > 0 ? `<span class="px-3 py-1 bg-surface-container rounded-lg font-body-md text-[13px] text-on-surface">+${extraCount} more</span>` : ""}
           </div>
           <div class="flex gap-3 mt-auto">
@@ -168,7 +182,7 @@
           <span class="material-symbols-outlined text-5xl text-primary-container/40">account_balance</span>
         </div>
         <h3 class="font-headline-md text-xl text-primary-container mb-1">${escapeHtml(university.name)}</h3>
-        <p class="font-body-md text-xs text-on-surface-variant mb-4">${activeProgrammes.length} listed programmes</p>
+        <p class="font-body-md text-xs text-on-surface-variant mb-4">${programmeCountText(activeProgrammes.length)}</p>
         <p class="font-body-md text-sm text-secondary font-medium mb-4 flex items-center justify-center gap-1">
           <span class="material-symbols-outlined text-sm">location_on</span> ${escapeHtml(university.location || university.city || university.country)}
         </p>
@@ -218,8 +232,8 @@
       window.location.href = query ? `programmes.html?search=${encodeURIComponent(query)}` : "programmes.html";
     });
 
-    const floatingPartnerText = Array.from(document.querySelectorAll("p")).find((paragraph) => paragraph.textContent.trim() === "20+ Partner");
-    if (floatingPartnerText) floatingPartnerText.textContent = `${universities.length} Partner`;
+    const floatingPartnerText = Array.from(document.querySelectorAll("p")).find((paragraph) => /^\d+\+? Partners?$/.test(paragraph.textContent.trim()));
+    if (floatingPartnerText) floatingPartnerText.textContent = pluralize(universities.length, "Partner");
 
     const partnerSection = findSectionByHeading("Official Partner Universities");
     const partnerGrid = partnerSection?.querySelector(".grid.grid-cols-1");
@@ -237,7 +251,7 @@
 
     const heroText = document.querySelector("main section:first-of-type p");
     if (heroText) {
-      heroText.textContent = `Browse ${universities.length} partner university and ${programmes.length} programmes supported by Rivil counsellors.`;
+      heroText.textContent = `Browse ${pluralize(universities.length, "partner university", "partner universities")} and ${pluralize(programmes.length, "programme")} supported by Rivil counsellors.`;
     }
 
     const searchInput = document.querySelector('input[placeholder*="Search universities"]');
@@ -377,6 +391,17 @@
     if (!university) return;
     const activeProgrammes = (university.programmes || []).filter((programme) => programme.is_active !== false);
     const subjects = compactList(activeProgrammes.map((programme) => programme.subject_area));
+    const studyLevels = compactList(activeProgrammes.map((programme) => titleCase(programme.degree_level))).join(", ");
+    const programmeIntro = activeProgrammes.length
+      ? `These are the current programmes listed for ${escapeHtml(university.name)}. Use the programme detail page or contact UKAdmit for application guidance.`
+      : `Programme listings for ${escapeHtml(university.name)} are being added. Contact UKAdmit for current application guidance and available study options.`;
+    const programmeCards = activeProgrammes.length
+      ? activeProgrammes.map((programme) => renderProgrammeCard({ ...programme, university })).join("")
+      : `<div class="md:col-span-2 lg:col-span-3 bg-surface-container rounded-[24px] p-10 border border-outline-variant text-center">
+          <h3 class="font-headline-md text-headline-md text-primary mb-3">Programme details coming soon</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant mb-6">Speak with UKAdmit for current course availability, entry guidance, and application support for ${escapeHtml(university.name)}.</p>
+          <a class="inline-flex justify-center items-center px-6 py-3 bg-secondary text-on-secondary rounded-xl font-label-bold text-label-bold hover:bg-secondary-container transition-colors" href="contact.html">Enquire Now</a>
+        </div>`;
     document.title = `${university.name} - UKAdmit`;
     const main = document.querySelector("main");
     if (!main) return;
@@ -398,7 +423,7 @@
             <h1 class="font-display-lg text-display-lg text-on-primary mb-6">${escapeHtml(university.name)}</h1>
             <div class="flex flex-wrap items-center gap-6 mb-10 text-on-primary/85">
               <div class="flex items-center gap-2"><span class="material-symbols-outlined">location_on</span><span class="font-body-lg text-body-lg">${escapeHtml(university.location || university.city || university.country)}</span></div>
-              <div class="flex items-center gap-2"><span class="material-symbols-outlined">menu_book</span><span class="font-body-lg text-body-lg">${activeProgrammes.length} programmes</span></div>
+              <div class="flex items-center gap-2"><span class="material-symbols-outlined">menu_book</span><span class="font-body-lg text-body-lg">${programmeCountText(activeProgrammes.length)}</span></div>
             </div>
             <div class="flex flex-col sm:flex-row gap-4">
               <a class="bg-teal-400 text-primary-container font-label-bold text-label-bold px-8 py-4 rounded-xl hover:bg-teal-300 transition-colors text-center" href="contact.html">Start Application</a>
@@ -417,12 +442,12 @@
           <div class="bg-surface-container-lowest rounded-[24px] p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)]">
             <span class="material-symbols-outlined text-secondary text-4xl mb-4">school</span>
             <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Study Levels</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">${escapeHtml(compactList(activeProgrammes.map((programme) => titleCase(programme.degree_level))).join(", "))}</p>
+            <p class="font-body-md text-body-md text-on-surface-variant">${escapeHtml(studyLevels || "Contact UKAdmit for options")}</p>
           </div>
           <div class="bg-surface-container-lowest rounded-[24px] p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)]">
             <span class="material-symbols-outlined text-secondary text-4xl mb-4">category</span>
             <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Study Areas</h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">${subjects.length} subject areas available</p>
+            <p class="font-body-md text-body-md text-on-surface-variant">${subjects.length ? pluralize(subjects.length, "subject area") + " available" : "Study areas being updated"}</p>
           </div>
         </div>
       </section>
@@ -430,10 +455,10 @@
         <div class="max-w-7xl mx-auto px-8">
           <div class="max-w-3xl mb-10">
             <h2 class="font-headline-lg text-headline-lg text-primary-container mb-4">Available Programmes</h2>
-            <p class="font-body-lg text-body-lg text-on-surface-variant">These are the current programmes listed for ${escapeHtml(university.name)}. Use the programme detail page or contact UKAdmit for application guidance.</p>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">${programmeIntro}</p>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-element-gap">
-            ${activeProgrammes.map((programme) => renderProgrammeCard({ ...programme, university })).join("")}
+            ${programmeCards}
           </div>
         </div>
       </section>`;
