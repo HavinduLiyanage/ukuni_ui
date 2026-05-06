@@ -102,10 +102,10 @@
 <body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen">
 <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/50 shadow-sm h-[72px]" style="font-family:Manrope,sans-serif;">
   <div class="flex justify-between items-center h-full px-4 sm:px-8 max-w-7xl mx-auto">
-    <a href="index.html" class="text-2xl font-extrabold text-[#0B1F3A] tracking-tighter flex items-end gap-2">
-      UKAdmit <span class="text-xs font-medium text-slate-500 pb-1 hidden sm:block">by Rivil International</span>
+    <a href="index.html" class="flex items-center shrink-0" aria-label="UkUniAdmissions home">
+      <img src="assets/ukuni-admissions-logo.png" alt="UkUniAdmissions" class="h-10 sm:h-11 w-auto object-contain"/>
     </a>
-    <div class="hidden md:flex items-center gap-1 text-sm font-semibold tracking-tight" role="navigation" aria-label="Primary navigation">
+    <div class="hidden lg:flex items-center gap-1 text-sm font-semibold tracking-tight" role="navigation" aria-label="Primary navigation">
       <a href="universities.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0F9F8F] transition-colors">Universities</a>
       <a href="programmes.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0F9F8F] transition-colors">Programmes</a>
       <a href="how-it-works.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0F9F8F] transition-colors">How It Works</a>
@@ -113,16 +113,16 @@
       <a href="about.html" class="text-[#0F9F8F] bg-teal-50 px-3 py-2 rounded-lg hover:text-[#0F9F8F] transition-colors">About</a>
       <a href="contact.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0F9F8F] transition-colors">Contact</a>
     </div>
-    <a href="contact.html" class="hidden md:flex shrink-0 items-center justify-center bg-[#0F9F8F] text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-[#0d8a7c] transition-all duration-300 active:scale-95 shadow-md">
+    <a href="contact.html" class="hidden lg:flex shrink-0 items-center justify-center bg-[#0F9F8F] text-white px-5 py-2.5 rounded-lg text-sm font-bold hover:bg-[#0d8a7c] transition-all duration-300 active:scale-95 shadow-md">
       Book Free Consultation
     </a>
     <!-- Mobile menu button (decorative) -->
-    <button class="md:hidden text-[#0B1F3A]" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+    <button class="lg:hidden text-[#0B1F3A]" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
       <span class="material-symbols-outlined text-3xl">menu</span>
     </button>
   </div>
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-1 shadow-lg" style="font-family:Manrope,sans-serif;">
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 px-6 py-4 space-y-1 shadow-lg" style="font-family:Manrope,sans-serif;">
     <a href="universities.html" class="block rounded-lg px-3 py-2 text-sm font-semibold text-[#0B1F3A] hover:bg-slate-50 hover:text-[#0F9F8F]">Universities</a>
     <a href="programmes.html" class="block rounded-lg px-3 py-2 text-sm font-semibold text-[#0B1F3A] hover:bg-slate-50 hover:text-[#0F9F8F]">Programmes</a>
     <a href="how-it-works.html" class="block rounded-lg px-3 py-2 text-sm font-semibold text-[#0B1F3A] hover:bg-slate-50 hover:text-[#0F9F8F]">How It Works</a>
@@ -214,8 +214,9 @@
 <footer class="bg-[#0B1F3A] w-full py-14 px-8 border-t border-slate-800" style="font-family:Manrope,sans-serif;">
   <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto text-slate-300 text-sm">
     <div>
-      <a href="index.html" class="text-2xl font-extrabold text-white block tracking-tight mb-1">UKAdmit</a>
-      <span class="text-sm text-slate-400 block mb-4">by Rivil International</span>
+      <a href="index.html" class="inline-flex items-center bg-white rounded-md px-3 py-2 mb-4" aria-label="UkUniAdmissions home">
+        <img src="assets/ukuni-admissions-logo.png" alt="UkUniAdmissions" class="h-9 w-auto object-contain"/>
+      </a>
       <p class="text-slate-400 mb-6 leading-relaxed">Expert guidance for Sri Lankan students applying to UK universities.</p>
       <p class="text-xs text-slate-500">© 2024 UKAdmit by Rivil International.</p>
     </div>
