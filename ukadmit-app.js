@@ -167,7 +167,9 @@
         </div>
         <p class="font-body-md text-body-md text-on-surface-variant line-clamp-3">${escapeHtml(programme.overview || "Contact UKAdmit for detailed course guidance and application support.")}</p>
         <div class="mt-auto flex gap-4 pt-4 border-t border-surface-variant">
-          <a class="flex-1 border-2 border-primary-container text-primary-container hover:bg-primary-container hover:text-white transition-colors rounded-xl font-label-bold text-label-bold py-3 text-center" href="${programmeUrl(programme)}">View Details</a>
+          ${programme.official_course_url
+            ? `<a class="flex-1 border-2 border-primary-container text-primary-container hover:bg-primary-container hover:text-white transition-colors rounded-xl font-label-bold text-label-bold py-3 text-center flex items-center justify-center gap-1.5" href="${escapeHtml(programme.official_course_url)}" target="_blank" rel="noopener"><span class="material-symbols-outlined text-[16px]">open_in_new</span>Official Course Page</a>`
+            : `<a class="flex-1 border-2 border-primary-container text-primary-container hover:bg-primary-container hover:text-white transition-colors rounded-xl font-label-bold text-label-bold py-3 text-center" href="contact.html">Enquire for Details</a>`}
           <a class="flex-1 bg-secondary text-on-secondary hover:bg-secondary-container transition-colors rounded-xl font-label-bold text-label-bold py-3 text-center shadow-sm" href="contact.html">Enquire Now</a>
         </div>
       </article>`;
@@ -212,7 +214,9 @@
           </div>
           <p class="font-body-md text-sm text-slate-600 mb-6 line-clamp-3 leading-relaxed">${escapeHtml(programme.overview || "Contact UKAdmit for detailed course guidance and application support.")}</p>
           <div class="mt-auto grid grid-cols-2 gap-3">
-            <a class="border border-slate-300 text-slate-700 py-3 rounded-xl font-label-bold text-xs hover:bg-slate-50 transition-colors text-center" href="${programmeUrl(programme)}">View Details</a>
+            ${programme.official_course_url
+              ? `<a class="border border-slate-300 text-slate-700 py-3 rounded-xl font-label-bold text-xs hover:bg-slate-50 transition-colors text-center flex items-center justify-center gap-1" href="${escapeHtml(programme.official_course_url)}" target="_blank" rel="noopener"><span class="material-symbols-outlined text-[14px]">open_in_new</span>Official Course</a>`
+              : `<a class="border border-slate-300 text-slate-700 py-3 rounded-xl font-label-bold text-xs hover:bg-slate-50 transition-colors text-center" href="contact.html">Enquire for Details</a>`}
             <a class="bg-[#0F9F8F] text-white py-3 rounded-xl font-label-bold text-xs hover:bg-[#0d8a7c] transition-colors shadow-md text-center" href="contact.html">Enquire Now</a>
           </div>
         </div>
@@ -235,7 +239,7 @@
     const floatingPartnerText = Array.from(document.querySelectorAll("p")).find((paragraph) => /^\d+\+? Partners?$/.test(paragraph.textContent.trim()));
     if (floatingPartnerText) floatingPartnerText.textContent = pluralize(universities.length, "Partner");
 
-    const partnerSection = findSectionByHeading("Official Partner Universities");
+    const partnerSection = document.getElementById("home-universities-section") || findSectionByHeading("Universities");
     const partnerGrid = partnerSection?.querySelector(".grid.grid-cols-1");
     if (partnerGrid) partnerGrid.innerHTML = universities.slice(0, 4).map(renderHomeUniversityCard).join("");
 
@@ -251,7 +255,7 @@
 
     const heroText = document.querySelector("main section:first-of-type p");
     if (heroText) {
-      heroText.textContent = `Browse ${pluralize(universities.length, "partner university", "partner universities")} and ${pluralize(programmes.length, "programme")} supported by Rivil counsellors.`;
+      heroText.textContent = `Browse ${pluralize(universities.length, "partner university", "partner universities")} and ${pluralize(programmes.length, "programme")} supported by UKUniAdmissions counsellors.`;
     }
 
     const searchInput = document.querySelector('input[placeholder*="Search universities"]');
@@ -309,6 +313,12 @@
     const locationContainer = Array.from(document.querySelectorAll("aside .flex.flex-wrap.gap-2")).pop();
     const initialUniversity = getParam("university") || "";
     let selectedLocation = "";
+    const PAGE_SIZE = 24;
+    let visibleCount = PAGE_SIZE;
+
+    const loadMoreWrapper = document.createElement("div");
+    loadMoreWrapper.className = "md:col-span-3 flex flex-col items-center gap-3 pt-4";
+    loadMoreWrapper.id = "load-more-wrapper";
 
     if (searchInput && getParam("search")) {
       searchInput.value = getParam("search");
@@ -349,7 +359,8 @@
       });
     }
 
-    function render() {
+    function render(resetPage = true) {
+      if (resetPage) visibleCount = PAGE_SIZE;
       const query = (searchInput?.value || "").trim().toLowerCase();
       const selectedSubject = subjectSelect?.value || "";
       const selectedLevels = new Set(levelCheckboxes.filter((checkbox) => checkbox.checked && checkbox.value).map((checkbox) => checkbox.value));
@@ -362,9 +373,26 @@
         const matchesUniversity = !initialUniversity || programme.university.slug === initialUniversity;
         return matchesQuery && matchesSubject && matchesLevel && matchesLocation && matchesUniversity;
       });
-      grid.innerHTML = filtered.length
-        ? filtered.map(renderProgrammeCard).join("")
-        : `<div class="md:col-span-2 text-center bg-surface-container-lowest rounded-xl p-10 border border-outline-variant">No matching programmes found.</div>`;
+      const shown = filtered.slice(0, visibleCount);
+      loadMoreWrapper.innerHTML = "";
+      if (!filtered.length) {
+        grid.innerHTML = `<div class="md:col-span-2 text-center bg-surface-container-lowest rounded-xl p-10 border border-outline-variant">No matching programmes found.</div>`;
+        return;
+      }
+      grid.innerHTML = shown.map(renderProgrammeCard).join("");
+      if (filtered.length > visibleCount) {
+        const remaining = filtered.length - visibleCount;
+        loadMoreWrapper.innerHTML = `
+          <p class="font-body-md text-sm text-on-surface-variant">Showing ${visibleCount} of ${filtered.length} programmes</p>
+          <button class="px-8 py-3 rounded-xl border-2 border-secondary text-secondary font-label-bold text-label-bold hover:bg-secondary hover:text-on-secondary transition-colors" id="load-more-btn">Load ${Math.min(remaining, PAGE_SIZE)} more</button>`;
+        loadMoreWrapper.querySelector("#load-more-btn")?.addEventListener("click", () => {
+          visibleCount += PAGE_SIZE;
+          render(false);
+        });
+      } else {
+        loadMoreWrapper.innerHTML = `<p class="font-body-md text-sm text-on-surface-variant">Showing all ${filtered.length} programmes</p>`;
+      }
+      grid.parentElement?.insertBefore(loadMoreWrapper, grid.nextSibling);
     }
 
     searchInput?.addEventListener("input", render);
